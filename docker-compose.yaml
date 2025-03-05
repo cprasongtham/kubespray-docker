@@ -1,0 +1,7 @@
+services:
+  kubespray:
+    image: quay.io/kubespray/kubespray:v2.27.0
+    command: tail -f /dev/null
+    volumes:
+      - ./inventory/snaplogic:/kubespray/inventory/snaplogic
+      - ./ssh-key/id_rsa:/root/.ssh/id_rsa

@@ -1,0 +1,1 @@
+ansible-playbook -i /kubespray/inventory/snaplogic/inventory.ini --private-key /root/.ssh/id_rsa cluster.yml -b

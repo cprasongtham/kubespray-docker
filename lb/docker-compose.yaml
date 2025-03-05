@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  nginx-lb:
+    image: nginx:latest
+    container_name: nginx-kube-lb
+    restart: always
+    ports:
+      - "8443:6443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - kube-net
+
+networks:
+  kube-net:
+    driver: bridge
